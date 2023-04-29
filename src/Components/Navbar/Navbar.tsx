@@ -12,6 +12,7 @@ export default function Navbar() {
       <div className={styles.webNav}>
         <div className={styles.insideWeb}>
           <div
+            style={{ color: "black", fontSize: "1.8rem" }}
             className={styles.logo}
             onClick={() => {
               setSection(0);
@@ -81,11 +82,15 @@ export default function Navbar() {
           </div>
           <div className={styles.iconPhone}>
             <Phone fill="white" />
-            <div className={styles.contactDetail}>123456789</div>
+            <div className={styles.contactDetail}>
+              <a href="tel:123456789">123456789</a>
+            </div>
           </div>
           <div className={styles.iconEmail}>
             <Email fill="white" />
-            <div className={styles.contactDetail}>email@gmail.com</div>
+            <div className={styles.contactDetail}>
+              <a href="mailto:email@gmail.com">email@gmail.com</a>
+            </div>
           </div>
         </div>
       </div>

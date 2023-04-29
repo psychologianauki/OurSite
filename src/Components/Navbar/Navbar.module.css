@@ -6,12 +6,12 @@
   display: none;
 }
 .webNav {
-  background-color: yellow;
+  background-color: white;
   height: 100vh;
   width: 30vh;
+  display: flex;
   flex-direction: column;
-  justify-content: ce;
-  align-items: center;
+  justify-content: center;
 }
 .insideWeb {
   display: flex;
@@ -23,18 +23,20 @@
 
 .sectionElem {
   width: 100%;
-  background-color: aqua;
   display: flex;
   justify-content: center;
+  align-items: center;
   color: black;
+  height: 50px;
 }
 .contactDetail {
   position: absolute;
   transform: translateX(0%);
   padding: 0.5rem;
-  background-color: #333;
-  color: white;
-  border-radius: 5px;
+  background-color: #b3b3b3;
+  color: black;
+  font-weight: 500;
+  border-radius: 8px;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.5s ease-in-out,
@@ -54,7 +56,6 @@
 
 .iconPhone,
 .iconEmail {
-  background-color: aqua;
   width: 100%;
 
   display: flex;
