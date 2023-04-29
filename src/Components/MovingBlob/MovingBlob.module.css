@@ -1,0 +1,56 @@
+.blobCont{
+    display: flex;
+    position: relative;
+    gap:10px;
+    align-items: center;
+}
+
+.blob{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #A673EF;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-45%);    
+}
+
+.blob2{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background-color: #A673EF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-35%,-35%);    
+}
+
+.blobs{
+    position: relative;
+    background-color: green;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left:20px;
+    top:30px;
+    animation: spin 3s linear infinite;
+    z-index: -1;
+}
+
+.label{
+    max-width: 150px;
+    font-size: xx-large;
+    font-weight: 600;
+    white-space: wrap;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+}
