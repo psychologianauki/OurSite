@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./Navbar.module.css";
 import { useState } from "react";
+import Phone from "@/icons/Phone";
+import Email from "@/icons/Email";
 
 export default function Navbar() {
   const [section, setSection] = useState<number>(-1);
@@ -77,8 +79,14 @@ export default function Navbar() {
           >
             Kontakt
           </div>
-          <div className={styles.icon}>Telefon</div>
-          <div className={styles.icon}>Wiadomosc</div>
+          <div className={styles.iconPhone}>
+            <Phone fill="white" />
+            <div className={styles.contactDetail}>123456789</div>
+          </div>
+          <div className={styles.iconEmail}>
+            <Email fill="white" />
+            <div className={styles.contactDetail}>email@gmail.com</div>
+          </div>
         </div>
       </div>
 
