@@ -57,8 +57,18 @@
 .iconPhone,
 .iconEmail {
   width: 100%;
-
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .webNav {
+    display: none;
+  }
+  .mobileNav {
+    display: block;
+    height: 70px;
+    background-color: white;
+  }
 }

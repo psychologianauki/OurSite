@@ -95,7 +95,11 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className={styles.mobileNav}>mobileNav</div>
+      <div className={styles.mobileNav}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   );
 }
