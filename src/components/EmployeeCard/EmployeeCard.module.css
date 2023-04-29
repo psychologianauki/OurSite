@@ -1,0 +1,129 @@
+.cardCont{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width:90%;
+    border: 1px solid rgb(173, 173, 173);
+    align-items: center;
+    gap:10px;
+    border-radius: 10px;
+}
+
+.imageClickButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 15%;
+    aspect-ratio: 1/1;
+    
+  }
+
+  .imageCardCont{
+    width: 80%;
+    aspect-ratio: 3/4;
+    position: relative;
+    transform-style: preserve-3d;
+    background-color: aliceblue;
+    cursor: pointer;
+  }
+
+  .imageCont,
+  .backInformationCont{
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+
+
+.imageCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+  
+  .backInformationCont {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    color: black;
+    bottom: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .infomrationAndIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .flipped {
+    transform: rotateY(180deg);
+    transition: transform 1.5s;
+  }
+
+  .unflipped{
+    transform: rotateY(360deg);
+    transition: transform 1.5s;
+  }
+
+.roleCont{
+    font-size: large;
+    font-weight: 600;
+
+}
+
+.nameCont{
+    font-size: large;
+    font-weight: 600;
+}
+
+.descriptionCont{
+    font-size: medium;
+    text-align: center;
+}
+
+.onlineStatusCont{
+    width: 100%;
+    display: flex;
+    margin-top: 2px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.online{
+    color: #B1EE80;
+}
+
+.online::before{
+    content: "●";
+    font-size: large;
+    margin-right: 5px;
+}
+
+.offline{
+    color: #FF6F65;
+}
+
+.offline::before{
+    content: "●";
+    font-size: large;
+    margin-right: 5px;
+}
+
+@media screen and (min-width:700px) {
+    .cardCont{
+        max-width: 300px;
+    }
+}
+    
