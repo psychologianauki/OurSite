@@ -3,9 +3,12 @@ import styles from "./Navbar.module.css";
 import { useState } from "react";
 import Phone from "@/icons/Phone";
 import Email from "@/icons/Email";
+import MenuClose from "@/icons/MenuClose";
+import MenuOpen from "@/icons/MenuOpen";
 
 export default function Navbar() {
   const [section, setSection] = useState<number>(-1);
+  const [mobileNav, setMoobileNav] = useState<boolean>(true);
 
   return (
     <div className={styles.container}>
@@ -96,9 +99,36 @@ export default function Navbar() {
       </div>
 
       <div className={styles.mobileNav}>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div
+          style={{
+            color: "black",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          Logo
+        </div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div className={styles.iconPhone}>
+            <Phone fill="white" />
+          </div>
+          <div className={styles.iconEmail}>
+            <Email fill="white" />
+          </div>
+          <div
+            style={{ display: "flex", alignItems: "center" }}
+            onClick={() => setMoobileNav(!mobileNav)}
+          >
+            {mobileNav ? <MenuClose fill="black" /> : <MenuOpen />}
+          </div>
+        </div>
       </div>
     </div>
   );

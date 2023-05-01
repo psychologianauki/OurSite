@@ -67,8 +67,11 @@
     display: none;
   }
   .mobileNav {
-    display: block;
+    display: flex;
     height: 70px;
     background-color: white;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
   }
 }
