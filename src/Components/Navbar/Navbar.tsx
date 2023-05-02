@@ -101,35 +101,69 @@ export default function Navbar() {
       <div className={styles.mobileNav}>
         <div
           style={{
-            color: "black",
+            width: "90%",
             display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            justifyContent: "space-between",
           }}
         >
-          Logo
-        </div>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <div className={styles.iconPhone}>
-            <Phone fill="white" />
-          </div>
-          <div className={styles.iconEmail}>
-            <Email fill="white" />
+          <div
+            style={{
+              color: "black",
+              display: "flex",
+
+              alignItems: "center",
+              width: "65%",
+            }}
+          >
+            Logo
           </div>
           <div
-            style={{ display: "flex", alignItems: "center" }}
-            onClick={() => setMoobileNav(!mobileNav)}
+            style={{
+              width: "35%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
           >
-            {mobileNav ? <MenuClose fill="black" /> : <MenuOpen />}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                gap: "15px",
+                alignItems: "center",
+              }}
+            >
+              <div className={styles.iconPhone}>
+                <Phone fill="white" />
+              </div>
+              <div className={styles.iconEmail}>
+                <Email fill="white" />
+              </div>
+            </div>
+            <div
+              style={{ display: "flex", alignItems: "center" }}
+              onClick={() => setMoobileNav(!mobileNav)}
+            >
+              {mobileNav ? <MenuClose fill="black" /> : <MenuOpen />}
+            </div>
           </div>
         </div>
       </div>
+      {mobileNav ? (
+        <div className={styles.hamburger}>
+          <div>
+            <ul className={styles.lista}>
+              <li style={{ fontWeight: "bolder" }}>Start</li>
+              <li>Oferta</li>
+              <li>Portfolio</li>
+              <li>O nas</li>
+              <li>Kontakt</li>
+            </ul>
+          </div>
+        </div>
+      ) : (
+        <div />
+      )}
     </div>
   );
 }
