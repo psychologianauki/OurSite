@@ -8,7 +8,7 @@ import MenuOpen from "@/icons/MenuOpen";
 
 export default function Navbar() {
   const [section, setSection] = useState<number>(-1);
-  const [mobileNav, setMoobileNav] = useState<boolean>(true);
+  const [mobileNav, setMoobileNav] = useState<boolean>(false);
 
   return (
     <div className={styles.container}>
@@ -153,11 +153,13 @@ export default function Navbar() {
         <div className={styles.hamburger}>
           <div>
             <ul className={styles.lista}>
-              <li style={{ fontWeight: "bolder" }}>Start</li>
-              <li>Oferta</li>
-              <li>Portfolio</li>
-              <li>O nas</li>
-              <li>Kontakt</li>
+              <li className={styles.elem} style={{ fontWeight: "bolder" }}>
+                Start
+              </li>
+              <li className={styles.elem}>Oferta</li>
+              <li className={styles.elem}>Portfolio</li>
+              <li className={styles.elem}>O nas</li>
+              <li className={styles.elem}>Kontakt</li>
             </ul>
           </div>
         </div>

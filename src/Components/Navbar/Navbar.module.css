@@ -72,6 +72,10 @@
   align-items: center;
   justify-content: center;
 }
+.elem {
+  transition: transform 0.5s ease-out;
+  transform: translateY(100%);
+}
 @media screen and (max-width: 768px) {
   .webNav {
     display: none;
