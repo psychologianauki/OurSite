@@ -5,6 +5,8 @@ import Phone from "@/icons/Phone"
 import Email from "@/icons/Email"
 import MenuClose from "@/icons/MenuClose"
 import MenuOpen from "@/icons/MenuOpen"
+import Link from "next/link"
+import { routes } from "@/routes"
 
 export default function Navbar() {
   const [section, setSection] = useState<number>(-1)
@@ -21,7 +23,7 @@ export default function Navbar() {
               setSection(0)
             }}
           >
-            Logo
+            <Link href={routes.START}>Logo</Link>
           </div>
           <div
             className={`${styles.sectionElem} ${section === 1 ? "active" : ""}`}
@@ -34,7 +36,7 @@ export default function Navbar() {
               cursor: "pointer",
             }}
           >
-            Start
+            <Link href={routes.START}>Start</Link>
           </div>
           <div
             className={styles.sectionElem}
@@ -47,20 +49,7 @@ export default function Navbar() {
               cursor: "pointer",
             }}
           >
-            Oferta
-          </div>
-          <div
-            className={styles.sectionElem}
-            onClick={() => {
-              setSection(3)
-            }}
-            style={{
-              backgroundColor: section === 3 ? "black" : "white",
-              color: section === 3 ? "white" : "black",
-              cursor: "pointer",
-            }}
-          >
-            Portfolio
+            <Link href={routes.OFFER}>Oferta</Link>
           </div>
           <div
             className={styles.sectionElem}
@@ -73,8 +62,9 @@ export default function Navbar() {
               cursor: "pointer",
             }}
           >
-            O nas
+            <Link href={routes.ABOUTUS}>O nas</Link>
           </div>
+
           <div
             className={styles.sectionElem}
             onClick={() => {
@@ -86,7 +76,20 @@ export default function Navbar() {
               cursor: "pointer",
             }}
           >
-            Kontakt
+            <Link href={routes.CONTACTUS}>Kontakt</Link>
+          </div>
+          <div
+            className={styles.sectionElem}
+            onClick={() => {
+              setSection(3)
+            }}
+            style={{
+              backgroundColor: section === 3 ? "black" : "white",
+              color: section === 3 ? "white" : "black",
+              cursor: "pointer",
+            }}
+          >
+            Log In/Register
           </div>
           <div className={styles.iconPhone}>
             <Phone fill="white" />
