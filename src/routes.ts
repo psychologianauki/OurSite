@@ -1,4 +1,5 @@
 export const routes = {
+  DEFAULT: "/",
   START: "/home",
   OFFER: "/offer",
   OFFERELEM: (id: string) => `/offet${id}`,

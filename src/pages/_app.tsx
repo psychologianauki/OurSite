@@ -4,6 +4,7 @@ import { useRouter } from "next/router"
 import AboutPage from "./about/index"
 import HomePage from "./home"
 import Layout from "@/Components/Layout/Layout"
+import { routes } from "@/routes"
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -11,11 +12,11 @@ export default function App({ Component, pageProps }: AppProps) {
   // Render the appropriate page component based on the route
   const renderPageComponent = () => {
     switch (router.pathname) {
-      case "/":
-        return <AboutPage />
-      case "/home":
+      case routes.DEFAULT:
         return <HomePage />
-      case "/about":
+      case routes.START:
+        return <HomePage />
+      case routes.ABOUTUS:
         return <AboutPage />
       default:
         return null
