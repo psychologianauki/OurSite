@@ -6,6 +6,8 @@ type MovingBlobProps = {
   icon: JSX.Element;
   className?: string;
   labelStyles?: React.CSSProperties;
+  blobColor?: string;
+  spinSpeed?: string;
 };
 
 export default function MovingBlob({
@@ -13,13 +15,18 @@ export default function MovingBlob({
   icon,
   className,
   labelStyles,
+  blobColor = "#A673EF",
+  spinSpeed = "3s",
 }: MovingBlobProps) {
   return (
     <div className={`${styles.blobCont} ${className}`}>
       <div>
-        <div className={styles.blobs}>
-          <div className={styles.blob} />
-          <div className={styles.blob2} />
+        <div className={styles.blobs} style={{ animationDuration: spinSpeed }}>
+          <div className={styles.blob} style={{ backgroundColor: blobColor }} />
+          <div
+            className={styles.blob2}
+            style={{ backgroundColor: blobColor }}
+          />
         </div>
         {icon}
       </div>
