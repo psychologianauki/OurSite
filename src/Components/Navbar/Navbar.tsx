@@ -16,80 +16,98 @@ export default function Navbar() {
     <div className={styles.container}>
       <div className={styles.webNav}>
         <div className={styles.insideWeb}>
-          <div
-            style={{ color: "black", fontSize: "1.8rem" }}
-            className={styles.logo}
-            onClick={() => {
-              setSection(0)
-            }}
+          <Link
+            href={routes.DEFAULT}
+            style={{ width: "100%", textAlign: "center" }}
           >
-            <Link href={routes.DEFAULT}>Logo</Link>
-          </div>
-          <div
-            className={`${styles.sectionElem} ${section === 1 ? "active" : ""}`}
-            onClick={() => {
-              setSection(1)
-            }}
-            style={{
-              backgroundColor: section === 1 ? "black" : "white",
-              color: section === 1 ? "white" : "black",
-              cursor: "pointer",
-            }}
-          >
-            <Link href={routes.START}>Start</Link>
-          </div>
-          <div
-            className={styles.sectionElem}
-            onClick={() => {
-              setSection(2)
-            }}
-            style={{
-              backgroundColor: section === 2 ? "black" : "white",
-              color: section === 2 ? "white" : "black",
-              cursor: "pointer",
-            }}
-          >
-            <Link href={routes.OFFER}>Offer</Link>
-          </div>
-          <div
-            className={styles.sectionElem}
-            onClick={() => {
-              setSection(4)
-            }}
-            style={{
-              backgroundColor: section === 4 ? "black" : "white",
-              color: section === 4 ? "white" : "black",
-              cursor: "pointer",
-            }}
-          >
-            <Link href={routes.ABOUTUS}>About us</Link>
-          </div>
-          <div
-            className={styles.sectionElem}
-            onClick={() => {
-              setSection(8)
-            }}
-            style={{
-              backgroundColor: section === 8 ? "black" : "white",
-              color: section === 8 ? "white" : "black",
-              cursor: "pointer",
-            }}
-          >
-            <Link href={routes.LECTURES}>Lectures</Link>
-          </div>
-          <div
-            className={styles.sectionElem}
-            onClick={() => {
-              setSection(5)
-            }}
-            style={{
-              backgroundColor: section === 5 ? "black" : "white",
-              color: section === 5 ? "white" : "black",
-              cursor: "pointer",
-            }}
-          >
-            <Link href={routes.CONTACTUS}>Contact</Link>
-          </div>
+            <div
+              style={{ color: "black", fontSize: "1.8rem" }}
+              className={styles.logo}
+              onClick={() => {
+                setSection(0)
+              }}
+            >
+              Logo
+            </div>
+          </Link>
+          <Link href={routes.START} style={{ width: "100%" }}>
+            <div
+              className={`${styles.sectionElem} ${
+                section === 1 ? "active" : ""
+              }`}
+              onClick={() => {
+                setSection(1)
+              }}
+              style={{
+                backgroundColor: section === 1 ? "black" : "white",
+                color: section === 1 ? "white" : "black",
+                cursor: "pointer",
+                width: "100%",
+              }}
+            >
+              Start
+            </div>
+          </Link>
+          <Link href={routes.OFFER} style={{ width: "100%" }}>
+            <div
+              className={styles.sectionElem}
+              onClick={() => {
+                setSection(2)
+              }}
+              style={{
+                backgroundColor: section === 2 ? "black" : "white",
+                color: section === 2 ? "white" : "black",
+                cursor: "pointer",
+              }}
+            >
+              Offer
+            </div>
+          </Link>
+          <Link href={routes.ABOUTUS} style={{ width: "100%" }}>
+            <div
+              className={styles.sectionElem}
+              onClick={() => {
+                setSection(4)
+              }}
+              style={{
+                backgroundColor: section === 4 ? "black" : "white",
+                color: section === 4 ? "white" : "black",
+                cursor: "pointer",
+              }}
+            >
+              About us
+            </div>
+          </Link>
+          <Link href={routes.LECTURES} style={{ width: "100%" }}>
+            <div
+              className={styles.sectionElem}
+              onClick={() => {
+                setSection(8)
+              }}
+              style={{
+                backgroundColor: section === 8 ? "black" : "white",
+                color: section === 8 ? "white" : "black",
+                cursor: "pointer",
+              }}
+            >
+              Lectures
+            </div>
+          </Link>
+          <Link href={routes.CONTACTUS} style={{ width: "100%" }}>
+            <div
+              className={styles.sectionElem}
+              onClick={() => {
+                setSection(5)
+              }}
+              style={{
+                backgroundColor: section === 5 ? "black" : "white",
+                color: section === 5 ? "white" : "black",
+                cursor: "pointer",
+              }}
+            >
+              Contact
+            </div>
+          </Link>
 
           <div
             className={styles.sectionElem}

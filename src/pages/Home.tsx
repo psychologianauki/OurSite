@@ -1,10 +1,5 @@
 import React from "react"
 function Home() {
-  return <>some stuffs</>
+  return <div className="">Home Page</div>
 }
-
-Home.getInitialProps = async () => {
-  return {}
-}
-
 export default Home
