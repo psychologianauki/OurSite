@@ -64,7 +64,19 @@ export default function Navbar() {
           >
             <Link href={routes.ABOUTUS}>About us</Link>
           </div>
-
+          <div
+            className={styles.sectionElem}
+            onClick={() => {
+              setSection(8)
+            }}
+            style={{
+              backgroundColor: section === 8 ? "black" : "white",
+              color: section === 8 ? "white" : "black",
+              cursor: "pointer",
+            }}
+          >
+            <Link href={routes.LECTURES}>Lectures</Link>
+          </div>
           <div
             className={styles.sectionElem}
             onClick={() => {
@@ -78,6 +90,7 @@ export default function Navbar() {
           >
             <Link href={routes.CONTACTUS}>Contact</Link>
           </div>
+
           <div
             className={styles.sectionElem}
             onClick={() => {
@@ -130,7 +143,7 @@ export default function Navbar() {
               width: "35%",
               display: "flex",
               alignItems: "center",
-              justifyContent: "space-between",
+              justifyContent: "flex-end",
             }}
           >
             <div
@@ -147,12 +160,12 @@ export default function Navbar() {
               <div className={styles.iconEmail}>
                 <Email fill="black" />
               </div>
-            </div>
-            <div
-              style={{ display: "flex", alignItems: "center" }}
-              onClick={() => setMoobileNav(!mobileNav)}
-            >
-              {mobileNav ? <MenuClose fill="black" /> : <MenuOpen />}
+              <div
+                style={{ display: "flex", alignItems: "center" }}
+                onClick={() => setMoobileNav(!mobileNav)}
+              >
+                {mobileNav ? <MenuClose fill="black" /> : <MenuOpen />}
+              </div>
             </div>
           </div>
         </div>
