@@ -130,7 +130,7 @@ export default function Navbar() {
               width: "35%",
               display: "flex",
               alignItems: "center",
-              justifyContent: "space-between",
+              justifyContent: "flex-end",
             }}
           >
             <div
@@ -147,12 +147,12 @@ export default function Navbar() {
               <div className={styles.iconEmail}>
                 <Email fill="black" />
               </div>
-            </div>
-            <div
-              style={{ display: "flex", alignItems: "center" }}
-              onClick={() => setMoobileNav(!mobileNav)}
-            >
-              {mobileNav ? <MenuClose fill="black" /> : <MenuOpen />}
+              <div
+                style={{ display: "flex", alignItems: "center" }}
+                onClick={() => setMoobileNav(!mobileNav)}
+              >
+                {mobileNav ? <MenuClose fill="black" /> : <MenuOpen />}
+              </div>
             </div>
           </div>
         </div>
