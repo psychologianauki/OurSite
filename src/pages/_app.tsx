@@ -7,6 +7,9 @@ import Layout from "@/Components/Layout/Layout"
 import { routes } from "@/routes"
 import React, { useEffect } from "react"
 import Home from "./Home"
+import Offer from "./offer/index"
+import Contact from "./contact/index"
+import Lectures from "./lectures/index"
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -23,8 +26,14 @@ export default function App({ Component, pageProps }: AppProps) {
         return <Home />
       case routes.START:
         return <HomePage />
+      case routes.OFFER:
+        return <Offer />
       case routes.ABOUTUS:
         return <AboutPage />
+      case routes.LECTURES:
+        return <Lectures />
+      case routes.CONTACTUS:
+        return <Contact />
       default:
         return <HomePage />
     }
