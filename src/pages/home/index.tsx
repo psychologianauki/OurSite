@@ -1,5 +1,6 @@
 import React from "react"
 
-export default function index() {
-  return <div>HomePage</div>
+function index() {
+  return <div className="bg-black">HomePage</div>
 }
+export default index

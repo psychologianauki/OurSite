@@ -23,7 +23,7 @@ export default function Navbar() {
               setSection(0)
             }}
           >
-            <Link href={routes.START}>Logo</Link>
+            <Link href={routes.DEFAULT}>Logo</Link>
           </div>
           <div
             className={`${styles.sectionElem} ${section === 1 ? "active" : ""}`}
@@ -92,13 +92,13 @@ export default function Navbar() {
             Log In/Register
           </div>
           <div className={styles.iconPhone}>
-            <Phone fill="white" />
+            <Phone fill="black" />
             <div className={styles.contactDetail}>
               <a href="tel:123456789">123456789</a>
             </div>
           </div>
           <div className={styles.iconEmail}>
-            <Email fill="white" />
+            <Email fill="black" />
             <div className={styles.contactDetail}>
               <a href="mailto:email@gmail.com">email@gmail.com</a>
             </div>
@@ -142,10 +142,10 @@ export default function Navbar() {
               }}
             >
               <div className={styles.iconPhone}>
-                <Phone fill="white" />
+                <Phone fill="black" />
               </div>
               <div className={styles.iconEmail}>
-                <Email fill="white" />
+                <Email fill="black" />
               </div>
             </div>
             <div
