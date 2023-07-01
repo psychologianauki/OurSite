@@ -49,7 +49,7 @@ export default function Navbar() {
               cursor: "pointer",
             }}
           >
-            <Link href={routes.OFFER}>Oferta</Link>
+            <Link href={routes.OFFER}>Offer</Link>
           </div>
           <div
             className={styles.sectionElem}
@@ -62,7 +62,7 @@ export default function Navbar() {
               cursor: "pointer",
             }}
           >
-            <Link href={routes.ABOUTUS}>O nas</Link>
+            <Link href={routes.ABOUTUS}>About us</Link>
           </div>
 
           <div
@@ -76,7 +76,7 @@ export default function Navbar() {
               cursor: "pointer",
             }}
           >
-            <Link href={routes.CONTACTUS}>Kontakt</Link>
+            <Link href={routes.CONTACTUS}>Contact</Link>
           </div>
           <div
             className={styles.sectionElem}
